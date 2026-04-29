@@ -1,6 +1,6 @@
 // Base URL for all API requests
 // In production, change this to your live domain e.g. 'https://yoursite.com/api'
-const API_URL = 'http://localhost:5555/api' // make sure to change this later after deploy change to e.g http://render/api
+const API_URL = 'https://final-project-full-stack-ehqc.onrender.com/api' // make sure to change this later after deploy change to e.g http://render/api
 
 // ===== REGISTER =====
 // Grab the register form — will be null on the login page so we check before using it
