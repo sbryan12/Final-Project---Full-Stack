@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Internship Innovations</title>
+</head>
+<body>
+  <h1 id="registerHeader">Register Internship Innovations</h1>
+  <form id="registerForm">
+    <div id="nameInput">
+      <label id="nameLabel">Name: </label><br>
+      <input type="text" id="name" required>
+    </div>
+    <br>
+    <div id="emailoruserInput"> 
+      <label id="emailoruserLabel">Email/Username: </label><br>
+      <input type="text" id="emailorUser" required>
+    </div>
+    <br>
+    <div id="passwordInput">
+      <label id="passwordLabel">Password: </label><br>
+      <input type="password" id="password" required>
+    </div>
+    <br>
+    <div id="submitOrReturn">
+      <button type="submit" id="submitBtn">Register Now</button>
+    <p id="loginLink">Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+  </form>
+
+  <p id="errorMsg" style="color:red;"></p>
+  <p id="successMsg" style="color:green;"></p>
+
+  
+  <style>
+      #registerHeader{
+        color: #d63384;
+        text-align: center;
+        padding-bottom: 15px;
+      }
+      #nameInput{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 15px;
+      }
+      #name{
+        margin-left: 15px;
+        width: 250px;
+        height: 30px;
+        border-radius: 8px;
+        border: 2px solid #ff758f;;
+      }
+      #nameLabel, #passwordLabel, #emailoruserLabel{
+        width: 120px;
+        color:  #c0184d;
+        font-weight: bold;
+
+      }
+      #emailoruserInput{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 15px;
+      
+      }
+      #emailorUser{
+        margin-left: 15px;
+        width: 250px;
+        height: 30px;
+        border-radius: 8px;
+        border: 2px solid #ff758f;;
+      }
+      #passwordInput{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 15px;
+        
+      }
+      #password{
+        margin-left: 15px;
+        width: 250px;
+        height: 30px;
+        border-radius: 8px;
+        border: 2px solid #ff758f;;
+      }
+      #submitOrReturn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 385px;
+        margin: 0 auto;
+      }
+      #submitBtn{
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+        height: 25px;
+        border: 3px solid #ff758f;
+        background-color:  white;
+        color: black;
+        font-weight: bold;
+        margin-left: 130px;
+        text-align: end;
+      }
+      #submitBtn:hover{
+        background-color: #ffe0ea;
+        color: #8b0a3a;
+      }
+      #loginLink{
+        width: 65%;
+        margin-left: 130px;
+      }
+  </style>
+  <script src="js/auth.js"></script>
+</body>
+</html>

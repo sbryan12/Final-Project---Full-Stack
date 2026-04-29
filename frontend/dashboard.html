@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - My Services</title>
+</head>
+<body>
+      <div class = "grid-container">
+        <div id="header">
+        <h1 id="title">Internship Innovations</h1>
+        <div class="logout">
+        <h1>Our Services Dashboard</h1>
+        <button id="logoutBtn">Logout</button>
+      </div>
+      </div>
+      <hr>
+      <!-- CREATE NOTE -->
+      <h2 id="createLabel">Create a Service Here</h2>
+      <form id="createServiceForm">
+        <input type="number" id="idText" placeholder="Enter your service id..." required>
+        <input type="text" id="service_titleText" placeholder="Enter your service title..." required>
+        <input type="number" id="priceText" placeholder="Enter your service price..." required>
+        <input type="boolean" id="discountText" placeholder="Enter your discount boolean..." required>
+        <input type="number" id="durationText" placeholder="Enter your duration..." required>
+        <input type="text" id="descriptionText" placeholder="Enter your service description..." required>
+        <button type="submit" id="createBtn">Add Service</button>
+      </form>
+      <p id="createMsg" style="color:green;"></p>
+
+      <hr>
+
+      <!-- ALL Services -->
+      <h2 id="servicesHeader">All Services</h2>
+      <div id="serviceList"></div>
+
+      <!-- EDIT NOTE (hidden until user clicks Edit) -->
+      <div id="editSection" style="display:none;">
+        <h2 id="editHeader">Edit Service</h2>
+        <input type="number" id="editIdText" placeholder="Updated idnumber...">
+        <input type="text" id="editservice_titleText" placeholder="Updated service title...">
+        <input type="number" id="editpriceText" placeholder="Updated service price..." required>
+        <input type="boolean" id="editdiscountText" placeholder="Update service title..." required>
+        <input type="number" id="editdurationText" placeholder="Updated duration..." required>
+        <input type="text" id="editdescriptionText" placeholder="Enter your service description..." required>
+        <input type="hidden" id="editserviceId">
+        <button id="saveEditBtn">Save</button>
+        <button id="cancelEditBtn">Cancel</button>
+        <p id="editMsg" style="color:green;"></p>
+      </div>
+  </div>
+  
+  <style>
+    body{
+       background: #d8e2dc;
+    }
+    .grid-container{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "header header header header"
+      "hr"
+      "createServiceForm createServiceForm createServiceForm createServiceForm"
+      "hr"
+      "serviceList serviceList serviceList serviceList" 
+      "editSection editSection editSection editSection" ;
+    }
+    #header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #a53860;
+    }
+    #logoutBtn{
+      margin-left: 145px;
+      width: 180px;
+      height: 30px;
+      color: #800f2f;
+      background-color: #ffcad4;
+      border-radius: 4px;
+      border: 2px solid #590d22;
+    }
+    #logoutBtn:hover{
+      background-color: #a4133c;
+      color: #fff0f3;
+    }
+    #createLabel{
+      color: #a53860;
+      font-weight: bold;
+    }
+    #createServiceForm{
+      display: flex;
+      border: 2px solid #450920;
+      border-radius: 12px;
+      height: 150px;
+      width: 100%;
+      padding-top: 25px;
+      gap: 20px;
+      flex-wrap: wrap;
+      background-color: #9d8189;
+    }
+    #createServiceForm input{
+      height: 30px;
+      width: 145px;
+      margin-left: 15px;
+      border: 2px solid black;
+      border-radius: 8px;
+    }
+    #createBtn{
+      height: 30px;
+      align-items: end;
+      border-radius: 10px;
+      border: 2px solid #8b0a3a;
+      background-color: #ffcad4;
+      color: #800f2f;
+
+    }
+    #createBtn:hover{
+      background-color: #a4133c;
+      color: #fff0f3;
+    }
+    #servicesHeader{
+      color: #a53860;
+      font-weight: bold;
+    }
+    .serviceCard{
+      border: 2px solid #8b0a3a;
+      border-radius: 8px;
+      padding-left: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      color: #FFFFFF;
+      background-color: #9d8189;
+      font-weight: bold;
+
+    }
+    #editBtn{
+      border-radius: 8px;
+      width: 120px;
+      background-color: #ffcad4;
+      color: #3b0016;
+      border: 2px solid #590d22;
+    }
+    #deleteBtn{
+      border-radius: 8px;
+      width: 120px;
+      border: 2px solid #590d22;
+      background-color: #ffcad4;
+      color: #3b0016;
+    }
+    #deleteBtn:hover{
+      background-color: #a4133c;
+      color: #fff0f3;
+    }
+    #editBtn:hover{
+      background-color: #a4133c;
+      color: #fff0f3;
+    }
+    #editSection{
+      border-radius: 8px;
+      border: 2px solid #8b0a3a;
+      padding-left: 15px;
+      background-color: #9d8189;
+
+
+    }
+    #editSection input{
+      height: 30px;
+      width: 135px;
+      margin-left: 15px;
+      border: 2px solid #da627d;
+      border-radius: 8px;
+    }
+    #editHeader{
+      padding-left: 15px;
+      color: #FFFFFF;
+    }
+    #saveEditBtn{
+      width: 120px;
+      border-radius: 8px;
+      background-color: #ff758f;
+      color: #3b0016;
+    }
+    #cancelEditBtn{
+      width: 120px;
+      border-radius: 8px;
+      background-color: #ff758f;
+      color: #3b0016;
+    }
+    #saveEditBtn:hover{
+      background-color: #a4133c;
+      color: #fff0f3;
+    }
+    #cancelEditBtn:hover{
+      background-color: #a4133c;
+      color: #fff0f3;
+    }
+  </style>
+
+  <script src="js/services.js"></script>
+</body>
+</html>
