@@ -114,6 +114,7 @@ document.getElementById('createServiceForm').addEventListener('submit', async (e
   // Show success message, clear the input, and refresh the services list
   document.getElementById('createMsg').style.color = 'green'
   document.getElementById('createMsg').textContent = 'Service created!'
+  document.getElementById('idText').value = ''
   document.getElementById('service_titleText').value = ''
   document.getElementById('priceText').value = ''
   document.getElementById('discountText').value = ''
