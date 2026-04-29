@@ -115,6 +115,10 @@ document.getElementById('createServiceForm').addEventListener('submit', async (e
   document.getElementById('createMsg').style.color = 'green'
   document.getElementById('createMsg').textContent = 'Service created!'
   document.getElementById('service_titleText').value = ''
+  document.getElementById('priceText').value = ''
+  document.getElementById('discountText').value = ''
+  document.getElementById('durationText').value = ''
+  document.getElementById('descriptionText').value = ''
   getServices()
 })
 
