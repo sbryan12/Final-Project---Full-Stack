@@ -19,10 +19,10 @@
       <form id="createServiceForm">
         <input type="number" id="idText" placeholder="Enter your service id..." required>
         <input type="text" id="service_titleText" placeholder="Enter your service title..." required>
-        <input type="number" id="priceText" placeholder="Enter your service price..." required>
-        <input type="boolean" id="discountText" placeholder="Enter your discount boolean..." required>
+        <input type="number" id="priceText" placeholder="service price in $..." required>
+        <input type="text" id="discountText" placeholder="True or false..." required>
         <input type="number" id="durationText" placeholder="Enter your duration..." required>
-        <input type="text" id="descriptionText" placeholder="Enter your service description..." required>
+        <input type="text" id="descriptionText" placeholder="service description..." required>
         <button type="submit" id="createBtn">Add Service</button>
       </form>
       <p id="createMsg" style="color:green;"></p>
@@ -39,7 +39,7 @@
         <input type="number" id="editIdText" placeholder="Updated idnumber...">
         <input type="text" id="editservice_titleText" placeholder="Updated service title...">
         <input type="number" id="editpriceText" placeholder="Updated service price..." required>
-        <input type="boolean" id="editdiscountText" placeholder="Update service title..." required>
+        <input type="text" id="editdiscountText" placeholder="Update true/false..." required>
         <input type="number" id="editdurationText" placeholder="Updated duration..." required>
         <input type="text" id="editdescriptionText" placeholder="Enter your service description..." required>
         <input type="hidden" id="editserviceId">
@@ -134,25 +134,25 @@
       font-weight: bold;
 
     }
-    #editBtn{
+    .editBtn{
       border-radius: 8px;
       width: 120px;
       background-color: #ffcad4;
       color: #3b0016;
       border: 2px solid #590d22;
     }
-    #deleteBtn{
+    .deleteBtn{
       border-radius: 8px;
       width: 120px;
       border: 2px solid #590d22;
       background-color: #ffcad4;
       color: #3b0016;
     }
-    #deleteBtn:hover{
+    .deleteBtn:hover{
       background-color: #a4133c;
       color: #fff0f3;
     }
-    #editBtn:hover{
+    .editBtn:hover{
       background-color: #a4133c;
       color: #fff0f3;
     }

@@ -76,8 +76,8 @@ function renderServices(services) {
       <p>Duration[in days]: ${service.duration}</p>
       <p>Description: ${service.description}</p>
       <p>Added by: ${service.username ? service.username : 'admin'}</p>
-      <button id="editBtn" onclick="startEdit('${service._id}', '${service.service_title}', '${service.price}', '${service.discount}', '${service.duration}', '${service.description}')">Edit</button>
-      <button id="deleteBtn" onclick="deleteService('${service._id}')">Delete</button>
+      <button class="editBtn" onclick="startEdit('${service._id}', '${service.service_title}', '${service.price}', '${service.discount}', '${service.duration}', '${service.description}')">Edit</button>
+      <button class="deleteBtn" onclick="deleteService('${service._id}')">Delete</button>
     `
     container.appendChild(div)
   })
@@ -91,7 +91,7 @@ document.getElementById('createServiceForm').addEventListener('submit', async (e
   const id = document.getElementById('idText').value
   const service_title = document.getElementById('service_titleText').value
   const price = document.getElementById('priceText').value
-  const discount = document.getElementById('discountText').value
+  const discount = document.getElementById('discountText').value === 'true'
   const duration = document.getElementById('durationText').value
   const description = document.getElementById('descriptionText').value
 
@@ -174,7 +174,7 @@ document.getElementById('saveEditBtn').addEventListener('click', async () => {
   const id = document.getElementById('editserviceId').value
   const service_title = document.getElementById('editservice_titleText').value
   const price = document.getElementById('editpriceText').value
-  const discount = document.getElementById('editdiscountText').value
+  const discount = document.getElementById('editdiscountText').value === 'true'
   const duration = document.getElementById('editdurationText').value
   const description = document.getElementById('editdescriptionText').value
 
